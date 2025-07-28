@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Иван — AI Content Creator</title>
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Шрифты и базовые цвета -->
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+    body {font-family: 'Inter', sans-serif;}
+    :root{
+      --clr-bg:#0f0f15;
+      --clr-accent:#4ade80;
+    }
+  </style>
+</head>
+<body class="bg-[#0f0f15] text-white scroll-smooth"><video autoplay="" class="fixed inset-0 w-full h-full object-cover -z-10 pointer-events-none" loop="" muted="" playsinline=""><source src="showreel_h264.mp4" type="video/mp4"/></video>
+<!-- ========== Навигация ========== -->
+<header class="fixed inset-x-0 top-0 z-50 backdrop-blur-lg bg-black/40">
+<div class="mx-auto max-w-7xl flex items-center justify-between px-6 py-4">
+<a class="font-black text-xl" href="#hero">IVAN.AI</a>
+<!-- desktop -->
+<nav class="hidden md:flex gap-8 text-sm">
+<a class="hover:text-green-400" href="#about">Обо мне</a>
+<a class="hover:text-green-400" href="#services">Услуги</a>
+<a class="hover:text-green-400" href="#portfolio">Кейсы</a>
+<a class="hover:text-green-400" href="#process">Процесс</a>
+<a class="hover:text-green-400" href="#pricing">Тарифы</a>
+<a class="hover:text-green-400" href="https://t.me/Ivn_Kovalev" target="_blank">Контакты</a>
+</nav>
+<!-- mobile burger -->
+<button class="md:hidden relative w-8 h-8" id="burger">
+<span class="absolute inset-0 m-auto w-6 h-0.5 bg-white transition-all"></span>
+<span class="absolute inset-0 m-auto w-6 h-0.5 bg-white translate-y-2 transition-all"></span>
+<span class="absolute inset-0 m-auto w-6 h-0.5 bg-white -translate-y-2 transition-all"></span>
+</button>
+</div>
+<!-- mobile panel -->
+<nav class="md:hidden hidden flex-col gap-6 text-center py-6 border-t border-white/10 bg-[#0f0f15]" id="mobileMenu">
+<a class="hover:text-green-400" href="#about">Обо мне</a>
+<a class="hover:text-green-400" href="#services">Услуги</a>
+<a class="hover:text-green-400" href="#portfolio">Кейсы</a>
+<a class="hover:text-green-400" href="#process">Процесс</a>
+<a class="hover:text-green-400" href="#pricing">Тарифы</a>
+<a class="hover:text-green-400" href="https://t.me/Ivn_Kovalev" target="_blank">Контакты</a>
+</nav>
+</header>
+<!-- ========== Hero ========== -->
+<section class="flex flex-col relative px-4 items-center sm:pt-[calc(5rem+env(safe-area-inset-top))] h-screen text-center justify-center min-h-[75vh] pt-[calc(3rem+env(safe-area-inset-top))] sm:pt-[calc(4rem+env(safe-area-inset-top))] lg:pt-[calc(5rem+env(safe-area-inset-top))]" id="hero">
+<!-- видео-фон -->
+<div class="absolute inset-0 bg-black/60"></div>
+<!-- контент -->
+<div class="relative text-center px-6">
+<h1 class="text-[1.75rem] sm:text-[2rem] md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-snug mb-4 max-w-4xl px-3 sm:text-4xl md:text-6xl lg:text-7xl font-extrabold leading-snug mb-6 max-w-4xl md:text-7xl font-extrabold mb-6 leading-tight">
+      Создаю визуальные миры<br class="hidden md:block"/>
+      силой искусственного интеллекта
+    </h1>
+<p class="max-w-xl mx-auto text-lg/relaxed text-gray-300 mt-2">
+      Концепт-арты, видео, музыка — полный креативный цикл, ускоренный генеративными моделями
+    </p>
+<a class="inline-block mt-10 px-8 py-4 rounded-full font-semibold bg-green-500 hover:bg-green-400 text-black transition" href="https://t.me/Ivn_Kovalev" target="_blank">
+       Обсудить проект
+    </a>
+</div>
+</section>
+<!-- ========== About ========== -->
+<section class="py-24 px-6" id="about">
+<div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
+<div>
+<h2 class="text-3xl md:text-4xl font-bold mb-6">Кто я</h2>
+<p class="text-gray-300 mb-4">
+        Я — <span class="text-white font-semibold">Иван</span>, AI Content Creator c двумя годами коммерческого
+        опыта. От концепт-артов для кино до 4K-роликов с AI-озвучкой —
+        помогаю брендам и студиям быстро получать контент, который цепляет.
+      </p>
+<ul class="list-disc list-inside space-y-2 text-gray-300">
+<li>10+ успешных проектов: кино, маркетинг, музыка</li>
+<li>Эксперт во всех топ-платформах — Midjourney, Stable Diffusion, Veo</li>
+<li>Собственный GPT-ассистент для точных мультимодальных промптов</li>
+</ul>
+</div>
+<div class="flex items-center justify-center">
+<img alt="Фото Ивана" class="rounded-2xl w-72 h-72 object-cover ring-4 ring-green-500/40" src="ivan-photo.jpg"/>
+</div>
+</div>
+</section>
+<!-- ========== Services ========== -->
+<section class="py-24 bg-[#111118] px-6" id="services">
+<div class="max-w-6xl mx-auto">
+<h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Услуги</h2>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+<!-- карточка -->
+<div class="bg-[#1a1a24] p-8 rounded-2xl shadow-lg hover:-translate-y-1 transition">
+<h3 class="font-semibold text-xl mb-4 text-green-400">AI-иллюстрации</h3>
+<p class="text-gray-300 text-sm">
+          Концепт-арты и ключ-визуалы высокого разрешения под кино, рекламу и игры.
+        </p>
+</div>
+<div class="bg-[#1a1a24] p-8 rounded-2xl shadow-lg hover:-translate-y-1 transition">
+<h3 class="font-semibold text-xl mb-4 text-green-400">Видео 4K на Veo/Pika</h3>
+<p class="text-gray-300 text-sm">
+          От сториборда до финального монтажа. Custom-промпты, апскейл, звук.
+        </p>
+</div>
+<div class="bg-[#1a1a24] p-8 rounded-2xl shadow-lg hover:-translate-y-1 transition">
+<h3 class="font-semibold text-xl mb-4 text-green-400">AI-озвучка &amp; музыка</h3>
+<p class="text-gray-300 text-sm">
+          ElevenLabs, Suno, Udio — голоса, треки и саунд-дизайн под ваш бренд.
+        </p>
+</div>
+<div class="bg-[#1a1a24] p-8 rounded-2xl shadow-lg hover:-translate-y-1 transition">
+<h3 class="font-semibold text-xl mb-4 text-green-400">R&amp;D / LoRA</h3>
+<p class="text-gray-300 text-sm">
+          Обучение LoRA, настройка ControlNet, автоматизация пайплайна на GPT.
+        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- ========== Portfolio ========== -->
+<section class="py-24 px-6" id="portfolio">
+<div class="max-w-6xl mx-auto">
+<h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Избранные кейсы</h2>
+<div class="space-y-16">
+<!-- кейс -->
+<div class="md:flex gap-12 items-center">
+<img alt="Армариус логотип" class="rounded-xl w-full md:w-1/2 object-cover mb-6 md:mb-0 ring-2 ring-white/10" src="armarius-logo.png"/>
+<div class="md:w-1/2">
+<h3 class="text-2xl font-semibold mb-4 text-green-400">«Армариус» — Sci-Fi концепт-арт</h3>
+<p class="text-gray-300 mb-4 text-sm leading-relaxed">
+            60 ключевых кадров сформировали визуальную атмосферу будущей анимации.
+          </p>
+<a class="text-sm font-semibold hover:text-green-400" href="#">Смотреть →</a>
+</div>
+</div>
+<!-- кейс -->
+<div class="md:flex gap-12 items-center flex-row-reverse">
+<img alt="Rox логотип" class="rounded-xl w-full md:w-1/2 object-cover mb-6 md:mb-0 ring-2 ring-white/10 h - 4 8 o b j e c t - c o n t a i n" src="rox-logo-new.png"/>
+<div class="md:w-1/2">
+<h3 class="text-2xl font-semibold mb-4 text-green-400">Клип «Братья Поздняковы»</h3>
+<p class="text-gray-300 mb-4 text-sm">
+            AI-сториборд → генерация → монтаж — полный цикл за 14 дней.
+          </p>
+<a class="text-sm font-semibold hover:text-green-400" href="#">Смотреть →</a>
+</div>
+</div>
+<!-- кейс -->
+<div class="md:flex gap-12 items-center">
+<img alt="FoodStorm логотип" class="rounded-xl w-full md:w-1/2 object-cover mb-6 md:mb-0 ring-2 ring-white/10" src="foodstorm-logo.png"/>
+<div class="md:w-1/2">
+<h3 class="text-2xl font-semibold mb-4 text-green-400">FoodStorm — визуалы для фуд-блога</h3>
+<p class="text-gray-300 mb-4 text-sm">
+            Увеличили вовлечённость в Instagram в 2 раза с помощью ярких AI-картинок.
+          </p>
+<a class="text-sm font-semibold hover:text-green-400" href="#">Смотреть →</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========== Process ========== -->
+<section class="py-24 bg-[#111118] px-6" id="process">
+<div class="max-w-5xl mx-auto text-center">
+<h2 class="text-3xl md:text-4xl font-bold mb-12">Как я работаю</h2>
+<div class="grid md:grid-cols-4 gap-10 text-left">
+<div class="p-6 rounded-xl bg-[#1a1a24] ring-1 ring-white/5">
+<span class="text-4xl font-black text-green-400">01</span>
+<h4 class="font-semibold mt-4 mb-2">Брифинг</h4>
+<p class="text-gray-300 text-sm">Уточняем цели, референсы, KPI и дедлайн.</p>
+</div>
+<div class="p-6 rounded-xl bg-[#1a1a24] ring-1 ring-white/5">
+<span class="text-4xl font-black text-green-400">02</span>
+<h4 class="font-semibold mt-4 mb-2">AI-R&amp;D</h4>
+<p class="text-gray-300 text-sm">Выбор моделей, разработка промптов, тестовые генерации.</p>
+</div>
+<div class="p-6 rounded-xl bg-[#1a1a24] ring-1 ring-white/5">
+<span class="text-4xl font-black text-green-400">03</span>
+<h4 class="font-semibold mt-4 mb-2">Итерации</h4>
+<p class="text-gray-300 text-sm">Черновики → фидбэк → доработка до «вау»-результата.</p>
+</div>
+<div class="p-6 rounded-xl bg-[#1a1a24] ring-1 ring-white/5">
+<span class="text-4xl font-black text-green-400">04</span>
+<h4 class="font-semibold mt-4 mb-2">Финал</h4>
+<p class="text-gray-300 text-sm">Передача исходников + инструкция по использованию.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ========== Pricing ========== -->
+<!-- ========== Testimonials (опционально) ========== -->
+<!-- ========== Contact ========== -->
+<section class="py-24 px-6" id="contact">
+<div class="max-w-3xl mx-auto text-center">
+<h2 class="text-3xl md:text-4xl font-bold mb-12">Свяжитесь со мной</h2>
+<p class="mt-10 text-sm text-gray-400">Напишите напрямую: <a class="underline hover:text-green-400" href="https://t.me/Ivn_Kovalev" target="_blank">https://t.me/Ivn_Kovalev</a></p>
+</div>
+</section>
+<!-- ========== Footer ========== -->
+<footer class="py-10 text-center text-gray-500 text-sm bg-[#0d0d12]">
+  © 2025 Иван — AI Content Creator. Сделано при поддержке нейросетей.
+</footer>
+<!-- Mobile menu toggle -->
+<script>
+  const burger = document.getElementById('burger');
+  const menu   = document.getElementById('mobileMenu');
+  burger.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+    burger.classList.toggle('open');
+  });
+</script>
+</body>
+</html>
