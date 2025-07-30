@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Иван — AI Content Creator</title>
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Шрифты и базовые цвета -->
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+    body {font-family: 'Inter', sans-serif;}
+    :root{
+      --clr-bg:#0f0f15;
+      --clr-accent:#4ade80;
+    }
+    
+    /* Дополнительные стили для мобильных устройств */
+    @media (max-width: 640px) {
+      .hero-title {
+        font-size: 2rem !important;
+        line-height: 1.2 !important;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .hero-title {
+        font-size: 1.75rem !important;
+        line-height: 1.1 !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-[#0f0f15] text-white scroll-smooth"><video autoplay="" class="fixed inset-0 w-full h-full object-cover -z-10 pointer-events-none" loop="" muted="" playsinline=""><source src="showreel_h264.mp4" type="video/mp4"/></video>
+
+<!-- ========== Навигация ========== -->
+<header class="fixed inset-x-0 top-0 z-50 backdrop-blur-lg bg-black/40">
+<div class="mx-auto max-w-7xl flex items-center justify-between px-4 sm:px-6 py-4">
+<a class="font-black text-lg sm:text-xl" href="#hero">IVAN.AI</a>
+<!-- desktop -->
+<nav class="hidden md:flex gap-8 text-sm items-center">
+<a class="hover:text-green-400 transition-colors bg-gray-800/50 px-3 py-1 rounded-full" href="#about">Обо мне</a>
+<a class="hover:text-green-400 transition-colors bg-gray-800/50 px-3 py-1 rounded-full" href="#services">Услуги</a>
+<a class="hover:text-green-400 transition-colors bg-gray-800/50 px-3 py-1 rounded-full" href="#portfolio">Кейсы</a>
+<a class="hover:text-green-400 transition-colors bg-gray-800/50 px-3 py-1 rounded-full" href="#process">Процесс</a>
+<a class="hover:text-blue-400 transition-colors bg-blue-500/20 px-3 py-1 rounded-full flex items-center gap-1" href="https://t.me/Ivn_Kovalev" target="_blank">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+<path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121L9.234 13.34l-2.97-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.917z"/>
+</svg>
+Контакты
+</a>
+</nav>
+<!-- mobile burger -->
+<button class="md:hidden relative w-8 h-8" id="burger">
+<span class="absolute inset-0 m-auto w-6 h-0.5 bg-white transition-all"></span>
+<span class="absolute inset-0 m-auto w-6 h-0.5 bg-white translate-y-2 transition-all"></span>
+<span class="absolute inset-0 m-auto w-6 h-0.5 bg-white -translate-y-2 transition-all"></span>
+</button>
+</div>
+<!-- mobile panel -->
+<nav class="md:hidden hidden flex-col gap-6 text-center py-6 border-t border-white/10 bg-black/40" id="mobileMenu">
+<a class="hover:text-green-400 transition-colors bg-gray-800/50 px-3 py-1 rounded-full inline-block" href="#about">Обо мне</a>
+<a class="hover:text-green-400 transition-colors bg-gray-800/50 px-3 py-1 rounded-full inline-block" href="#services">Услуги</a>
+<a class="hover:text-green-400 transition-colors bg-gray-800/50 px-3 py-1 rounded-full inline-block" href="#portfolio">Кейсы</a>
+<a class="hover:text-green-400 transition-colors bg-gray-800/50 px-3 py-1 rounded-full inline-block" href="#process">Процесс</a>
+<a class="hover:text-blue-400 transition-colors text-blue-400 bg-blue-500/20 px-3 py-1 rounded-full inline-flex items-center justify-center gap-2" href="https://t.me/Ivn_Kovalev" target="_blank">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+<path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121L9.234 13.34l-2.97-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.917z"/>
+</svg>
+Контакты
+</a>
+</nav>
+</header>
+
+<!-- ========== Hero ========== -->
+<section class="flex pt-[calc(4rem+env(safe-area-inset-top))] flex-col relative px-4 items-center sm:pt-[calc(5rem+env(safe-area-inset-top))] h-screen text-center min-h-[80vh] justify-center" id="hero">
+<!-- видео-фон -->
+<div class="absolute inset-0 bg-black/60"></div>
+<!-- контент -->
+<div class="relative text-center px-6">
+<h1 class="hero-title text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold leading-snug mb-6 max-w-4xl md:text-7xl font-extrabold mb-6 leading-tight">
+      Создаю визуальные миры<br class="hidden md:block"/>
+      силой искусственного интеллекта
+    </h1>
+<p class="max-w-xl mx-auto text-lg/relaxed text-gray-300">
+      Концепт-арты, видео, клипы — полный креативный цикл, ускоренный генеративными моделями
+    </p>
+<div class="flex flex-col sm:flex-row gap-3 justify-center mt-8 px-4">
+<a class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full font-semibold bg-blue-500/80 hover:bg-blue-400/90 text-white transition text-sm" href="https://t.me/Ivn_Kovalev" target="_blank">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+<path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121L9.234 13.34l-2.97-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.917z"/>
+</svg>
+Обсудить проект
+</a>
+<a class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full font-semibold bg-red-600/80 hover:bg-red-500/90 text-white transition text-sm" href="https://youtu.be/FkxvsE2fTDY" target="_blank">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+<path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+</svg>
+Showreel
+</a>
+</div>
+</div>
+</section>
+
+<!-- ========== About ========== -->
+<section class="py-16 sm:py-24 px-4 sm:px-6 bg-black/40" id="about">
+<div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 sm:gap-12">
+<div>
+<h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">Кто я</h2>
+<p class="text-gray-300 mb-4 text-sm sm:text-base">
+        Я — <span class="text-white font-semibold">Иван</span>, AI Content Creator c тремя годами коммерческого
+        опыта. От концепт-артов для кино до 4K-роликов с AI-озвучкой —
+        помогаю брендам и студиям быстро получать контент, который цепляет.
+      </p>
+<ul class="list-disc list-inside space-y-2 text-gray-300 text-sm sm:text-base">
+<li>10+ успешных проектов: кино, анимация, клипы</li>
+<li>Работаю во всех топ-платформах — Midjourney, Stable Diffusion, Runway, Veo, Kling, Flux</li>
+<li>Работаю в программах Premiere, Davinci, After Effects, Photoshop</li>
+<li>Собственный GPT-ассистенты для точных мультимодальных промптов</li>
+</ul>
+</div>
+<div class="flex items-center justify-center">
+<img alt="Фото Ивана" class="rounded-2xl w-72 h-72 object-cover ring-4 ring-green-500/40" src="ivan-photo.jpg"/>
+</div>
+</div>
+</section>
+
+<!-- ========== Services ========== -->
+<section class="py-16 sm:py-24 bg-black/40 px-4 sm:px-6" id="services">
+<div class="max-w-6xl mx-auto">
+<h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-center">Услуги</h2>
+<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-10">
+<!-- карточка -->
+<div class="bg-[#1a1a24]/80 p-6 sm:p-8 rounded-2xl shadow-lg hover:-translate-y-1 transition-transform">
+<h3 class="font-semibold text-lg sm:text-xl mb-3 sm:mb-4 text-green-400">AI-иллюстрации</h3>
+<p class="text-gray-300 text-sm">
+          Концепт-арты, разработка персонажей, фоны под кино, рекламу и игры.
+        </p>
+</div>
+<div class="bg-[#1a1a24]/80 p-6 sm:p-8 rounded-2xl shadow-lg hover:-translate-y-1 transition-transform">
+<h3 class="font-semibold text-lg sm:text-xl mb-3 sm:mb-4 text-green-400">Видео высокого разрешения</h3>
+<p class="text-gray-300 text-sm">
+          От сториборда до финального монтажа. Custom-промпты, апскейл, звук.
+        </p>
+</div>
+<div class="bg-[#1a1a24]/80 p-6 sm:p-8 rounded-2xl shadow-lg hover:-translate-y-1 transition-transform">
+<h3 class="font-semibold text-lg sm:text-xl mb-3 sm:mb-4 text-green-400">AI-озвучка и музыка</h3>
+<p class="text-gray-300 text-sm">
+          ElevenLabs, Suno, Udio — голоса, треки и саунд-дизайн под ваш бренд.
+        </p>
+</div>
+<div class="bg-[#1a1a24]/80 p-6 sm:p-8 rounded-2xl shadow-lg hover:-translate-y-1 transition-transform">
+<h3 class="font-semibold text-lg sm:text-xl mb-3 sm:mb-4 text-green-400">R&amp;D / LoRA</h3>
+<p class="text-gray-300 text-sm">
+          Обучение LoRA, настройка ControlNet, автоматизация пайплайна на GPT.
+        </p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ========== Portfolio ========== -->
+<section class="py-16 sm:py-24 px-4 sm:px-6 bg-black/40" id="portfolio">
+<div class="max-w-6xl mx-auto">
+<h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-center">Избранные кейсы</h2>
+<div class="space-y-12 sm:space-y-16">
+<!-- кейс -->
+<div class="md:flex gap-12 items-center">
+<img alt="Армариус логотип" class="rounded-xl w-full md:w-1/2 object-cover mb-6 md:mb-0 ring-2 ring-white/10" src="armarius-logo.png"/>
+<div class="md:w-1/2">
+<h3 class="text-2xl font-semibold mb-4 text-green-400">«Армариус» — Sci-Fi концепт-арт</h3>
+<p class="text-gray-300 mb-4 text-sm leading-relaxed">
+            Создание концепт-артов и визуальных материалов для кинопроекта. Разработка уникального визуального стиля и атмосферы проекта.
+          </p>
+</div>
+</div>
+<!-- кейс -->
+<div class="md:flex gap-12 items-center flex-row-reverse">
+<img alt="Rox логотип" class="rounded-xl w-full md:w-1/2 object-contain mb-6 md:mb-0 ring-2 ring-white/10 aspect-video bg-black/20" src="rox-logo-new.png"/>
+<div class="md:w-1/2">
+<h3 class="text-2xl font-semibold mb-4 text-green-400">Клип «Братья Поздняковы»</h3>
+<p class="text-gray-300 mb-4 text-sm">
+            Производство видеоконтента для музыкального клипа. Создание динамичных визуальных эффектов и анимации.
+          </p>
+<a class="inline-flex items-center gap-2 text-sm font-semibold text-red-500 hover:text-red-400 transition-colors" href="https://youtu.be/HtClrLiJTkI?si=ibQf5gNV9hfxUYXl" target="_blank">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+<path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+</svg>
+Смотреть клип
+</a>
+</div>
+</div>
+<!-- кейс -->
+<div class="md:flex gap-12 items-center">
+<img alt="FoodStorm логотип" class="rounded-xl w-full md:w-1/2 object-cover mb-6 md:mb-0 ring-2 ring-white/10" src="foodstorm-logo.png"/>
+<div class="md:w-1/2">
+<h3 class="text-2xl font-semibold mb-4 text-green-400">FoodStorm — визуалы для фуд-блога</h3>
+<p class="text-gray-300 mb-4 text-sm">
+            Генерация визуального контента для обложек блога. Создание анимационного аватара для reels.
+          </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ========== Process ========== -->
+<section class="py-16 sm:py-24 bg-black/40 px-4 sm:px-6" id="process">
+<div class="max-w-5xl mx-auto text-center">
+<h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12">Как я работаю</h2>
+<div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-10 text-left">
+<div class="p-4 sm:p-6 rounded-xl bg-[#1a1a24]/80 ring-1 ring-white/5">
+<span class="text-3xl sm:text-4xl font-black text-green-400">01</span>
+<h4 class="font-semibold mt-3 sm:mt-4 mb-2">Брифинг</h4>
+<p class="text-gray-300 text-sm">Уточняем цели, референсы, KPI и дедлайн.</p>
+</div>
+<div class="p-4 sm:p-6 rounded-xl bg-[#1a1a24]/80 ring-1 ring-white/5">
+<span class="text-3xl sm:text-4xl font-black text-green-400">02</span>
+<h4 class="font-semibold mt-3 sm:mt-4 mb-2">R&D</h4>
+<p class="text-gray-300 text-sm">Выбор моделей, разработка промптов, тестовые генерации.</p>
+</div>
+<div class="p-4 sm:p-6 rounded-xl bg-[#1a1a24]/80 ring-1 ring-white/5">
+<span class="text-3xl sm:text-4xl font-black text-green-400">03</span>
+<h4 class="font-semibold mt-3 sm:mt-4 mb-2">Итерации</h4>
+<p class="text-gray-300 text-sm">Концепт по ТЗ – фидбэк – доработка до «вау»-результата.</p>
+</div>
+<div class="p-4 sm:p-6 rounded-xl bg-[#1a1a24]/80 ring-1 ring-white/5">
+<span class="text-3xl sm:text-4xl font-black text-green-400">04</span>
+<h4 class="font-semibold mt-3 sm:mt-4 mb-2">Финал</h4>
+<p class="text-gray-300 text-sm">Апскейл + передача исходников.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ========== Contact ========== -->
+<section class="py-16 sm:py-24 px-4 sm:px-6 bg-black/40" id="contact">
+<div class="max-w-3xl mx-auto text-center">
+<h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12">Свяжитесь со мной</h2>
+<a class="inline-flex items-center gap-2 px-6 py-3 bg-blue-500/80 hover:bg-blue-400/90 text-white rounded-full font-semibold transition-colors" href="https://t.me/Ivn_Kovalev" target="_blank">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+<path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121L9.234 13.34l-2.97-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.917z"/>
+</svg>
+Написать
+</a>
+</div>
+</section>
+
+<!-- ========== Footer ========== -->
+<footer class="py-8 sm:py-10 text-center text-gray-500 text-sm bg-black/40 px-4">
+  © 2025 Иван — AI Content Creator. Сделано при поддержке нейросетей.
+</footer>
+
+<!-- Mobile menu toggle -->
+<script>
+  const burger = document.getElementById('burger');
+  const menu   = document.getElementById('mobileMenu');
+  burger.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+    burger.classList.toggle('open');
+  });
+  
+  // Smooth scroll для якорных ссылок
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+        // Закрываем мобильное меню после клика
+        menu.classList.add('hidden');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
